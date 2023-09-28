@@ -1,0 +1,35 @@
+{
+  "name": "web-week",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "fe-dev": "next dev ./frontend",
+    "fe-build": "next build ./frontend",
+    "fe-start": "next start ./frontend",
+    "fe-lint": "next lint ./frontend",
+    "be-prebuild": "tslint -c ./tslint.json -p tsconfig.json --fix",
+    "be-build": "tsc -p ./backend",
+    "be-prestart": "npm run be-build",
+    "be-start": "node ./backend/dist",
+    "be-dev": "nodemon --watch ./backend/src -e ts --exec npm run start"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "tslint-config-prettier": "^1.18.0",
+    "winston": "^3.10.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.18",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "postcss": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest"
+  }
+}
