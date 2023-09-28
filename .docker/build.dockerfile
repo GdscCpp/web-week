@@ -3,11 +3,10 @@ FROM node:16
 WORKDIR /usr/app
 
 COPY package*.json ./
-COPY ./backend ./backend
-COPY ./frontend ./frontend
 
-RUN apk update
 RUN npm install
+
+COPY . .
 
 RUN npm run be-build
 RUN npm run fe-build 

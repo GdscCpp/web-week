@@ -11,6 +11,9 @@
     "rootDir": "./src",
     "outDir": "./dist",
     "baseUrl": ".",
+    "paths": {
+      "*": ["node_modules/*"]
+    },
     "plugins": [
       {
         "transform": "ts-auto-mock/transformer",
