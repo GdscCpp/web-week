@@ -7,13 +7,13 @@ This is the repository for the GDSC x Fast Web-Week demo.
 To run the frontend, run the following in the root directory
 
 ```bash
-npm run fe-build & npm run fe-start
+cd frontend & npm run dev
 ```
 
 ## Express.js Backend
 
 ```bash
-npm run be-build & npm run be-start
+cd backend & npm run dev
 ```
 
 ## Docker
