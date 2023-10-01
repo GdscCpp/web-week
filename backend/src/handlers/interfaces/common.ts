@@ -7,5 +7,5 @@ export interface BaseRequestBody<Tbody> extends Request {
 export interface LoginBody extends BaseRequestBody<{ username: string; password: string }> {}
 
 export interface TextResponse extends Response {
-  response:string
+  response: string;
 }

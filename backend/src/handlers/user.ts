@@ -21,6 +21,6 @@ export const login = async (req: LoginBody, res: TextResponse) => {
     logger.error(error);
 
     res.status(500);
-    res.send({response: error.message});
+    res.send({ response: error.message });
   }
 };
