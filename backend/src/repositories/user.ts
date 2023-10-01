@@ -4,10 +4,10 @@ import { DatabaseEntry } from '@lib/interfaces/db';
 
 /**
  * Repository function for getting a user by their email and password
- * 
+ *
  * @param {string} username - the desired username to search for
  * @param {string} password - the desired password to search for
- * @returns {Promise<void>} 
+ * @returns {Promise<void>}
  */
 export const getUser = async (username: string, password: string) => {
   // Normally this would be a db model/connection instance, but we are keeping it simple
