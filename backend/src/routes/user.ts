@@ -1,10 +1,10 @@
-import { Router } from "express";
+import { Router } from 'express';
 
-import { handler } from "@handlers/index";
+import { handler } from '@handlers/index';
 
-const userRoutes = Router()
+const userRoutes = Router();
 
 // normally we would add a validator here as we;;
-userRoutes.post('/login', handler.login)
+userRoutes.post('/login', handler.login);
 
-export {userRoutes};
+export { userRoutes };

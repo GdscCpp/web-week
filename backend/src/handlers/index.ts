@@ -1,1 +1,1 @@
-export * as handler from './user'
+export * as handler from './user';

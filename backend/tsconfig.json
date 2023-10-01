@@ -13,11 +13,11 @@
     "baseUrl": ".",
     "paths": {
       "*": ["node_modules/*"],
-      "@handlers/*":["./src/handlers/*"],
-      "@lib/*":["./src/lib/*"],
-      "@repositories/*":["./src/repositories/*"],
-      "@routes/*":["./src/repositories/*"],
-      "@services/*":["./src/services/*"]
+      "@handlers/*": ["./src/handlers/*"],
+      "@lib/*": ["./src/lib/*"],
+      "@repositories/*": ["./src/repositories/*"],
+      "@routes/*": ["./src/repositories/*"],
+      "@services/*": ["./src/services/*"]
     },
     "plugins": [
       {
