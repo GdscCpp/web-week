@@ -1,0 +1,20 @@
+{
+  "name": "web-week",
+  "version": "1.0.0",
+  "description": "This is the repository for the GDSC x Fast Web-Week demo.",
+  "main": "index.js",
+  "scripts": {
+    "be-start":"cd ./backend & npm run start",
+    "fe-start":"cd ./frontend & npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GdscCpp/web-week.git"
+  },
+  "author": "GDSC x FAST @ CPP",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GdscCpp/web-week/issues"
+  },
+  "homepage": "https://github.com/GdscCpp/web-week#readme"
+}
