@@ -2,6 +2,8 @@ FROM node:16
 
 WORKDIR /app
 
+ENV uploadPath './backend/uploads'
+
 COPY package*.json /app/
 RUN npm install
 

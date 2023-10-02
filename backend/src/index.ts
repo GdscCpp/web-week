@@ -13,18 +13,15 @@ moduleAlias.addAliases({
 });
 
 import { logger } from '@lib/logger';
-import { userRoutes } from './routes/user';
-
-const app = express();
+import routes from './routes';
 
 const port = process.env.PORT || 8000;
 
-app.use(express.urlencoded({ extended: false }));
+const app = express();
 
 app.use(express.json());
 
-// normally we would export each set of routes to a single routes file, instead of directly importing it
-app.use(userRoutes);
+app.use(routes);
 
 app.listen(port, () => {
   logger.info(`Running on ${port}`);
