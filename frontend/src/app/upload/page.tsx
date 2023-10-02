@@ -6,9 +6,9 @@ export default function Upload() {
 
   return (
     <main>
-      <div className={'flex h-screen'}>
-        <div className={'w-1/2 bg-neutral-800 flex-auto pt-10'}>
-            <h1 className=" text-white text-[70px] font-semibold font-['Inter'] pl-[80px]">
+      <div className={'flex flex-row h-fit'}>
+        <div className={'w-1/2 bg-neutral-800 h-fit '}>
+            <h1 className=" text-white text-[70px] font-semibold font-['Inter'] pl-[80px] mt-10">
                 Upload your resume on the right!
             </h1>
             <p className="ml-[80px] text-white text-2xl font-semibold font-['Inter'] leading-[40px] mt-20 mr-20">
