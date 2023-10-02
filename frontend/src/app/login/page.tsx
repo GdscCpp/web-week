@@ -34,7 +34,7 @@ export default function Login() {
   return (
     <main>
       <div
-        className={'w-full min-h-screen'}
+        className={'w-full h-screen overflow-y-hidden'}
         style={{
           backgroundImage: `url(${background})`,
         }}
@@ -42,8 +42,8 @@ export default function Login() {
         <div className={"text-white text-8xl font-normal font-['Jockey One'] pt-2.5 text-center"}>
           <span>RateMyResume</span>
         </div>
-        <div className="justify-center flex mt-60">
-          <div className="w-[845px] bg-zinc-300 rounded-[40px]">
+        <div className="justify-center flex ">
+          <div className="w-[845px] bg-zinc-300 rounded-[40px] mt-60">
             <div className="relative flex justify-center">
               <img
                 className="rounded-full h-45 w-45 border absolute top-[-130px]"
@@ -62,7 +62,7 @@ export default function Login() {
                 <input
                   className="mb-5 bg-zinc-500 text-opacity-30 text-[40px] font-normal font-['Inter'] rounded-2xl pl-5"
                   placeholder="Password"
-                  type="text"
+                  type="password"
                   onChange={(e) => setPassword((e.target as HTMLInputElement).value)}
                 />
                 <button

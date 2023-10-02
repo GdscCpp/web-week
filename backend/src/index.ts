@@ -14,10 +14,18 @@ moduleAlias.addAliases({
 
 import { logger } from '@lib/logger';
 import routes from './routes';
+import cors from 'cors';
+
+const corsOptions = {
+  origin: 'http://localhost:3000',
+  optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
 
 const port = process.env.PORT || 8000;
 
 const app = express();
+
+app.use(cors(corsOptions))
 
 app.use(express.json());
 
