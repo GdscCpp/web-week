@@ -13,9 +13,11 @@ interface TextResponse {
 }
 
 export const login = async (username: string, password: string) => {
-  const req = await axios.post<TextResponse>(API_ROUTES.LOGIN, { username, password });
-  if (req.status == HTTPCODES.SUCCESS) {
-    return true;
+  try{
+    await axios.post<TextResponse>(API_ROUTES.LOGIN, { username, password });
+    return true
   }
-  return false;
+  catch(error){
+    return false
+  }
 };
