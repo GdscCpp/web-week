@@ -4,8 +4,8 @@
   "description": "This is the repository for the GDSC x Fast Web-Week demo.",
   "main": "index.js",
   "scripts": {
-    "be-start":"cd ./backend & npm run start",
-    "fe-start":"cd ./frontend & npm run start"
+    "be-start": "node ./backend/dist/index.js",
+    "fe-start": "next start ./frontend"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/GdscCpp/web-week/issues"
   },
-  "homepage": "https://github.com/GdscCpp/web-week#readme"
+  "homepage": "https://github.com/GdscCpp/web-week#readme",
+  "dependencies": {
+    "next": "13.5.3",
+    "tslint": "6.1.3"
+  }
 }

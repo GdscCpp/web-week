@@ -20,7 +20,7 @@ export const login = async (req: LoginBody, res: TextResponse) => {
   } catch (error) {
     logger.error(error);
 
-    res.status(500);
+    res.status(401);
     res.send({ response: error.message });
   }
 };

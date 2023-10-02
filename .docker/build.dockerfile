@@ -1,18 +1,22 @@
 FROM node:16
 
-WORKDIR /usr/app
+WORKDIR /app
 
-COPY package*.json ./
-
+COPY package*.json /app/
 RUN npm install
 
-COPY . .
+COPY ./frontend /app/frontend
+COPY ./backend /app/backend
 
-RUN npm run be-build
-RUN npm run fe-build 
+WORKDIR /app/frontend
+RUN npm install & npm run build
+
+WORKDIR /app/backend
+RUN npm install & npm run build
 
 EXPOSE 3000
 EXPOSE 8000
 
-CMD npm run be-start & npm run fe-start
+WORKDIR /app
 
+CMD npm run fe-start & npm run be-start
