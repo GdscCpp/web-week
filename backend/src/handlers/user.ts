@@ -3,7 +3,7 @@ import { Response } from 'express';
 
 import { UserService } from '@services/index';
 
-import { LoginBody, TextResponse } from './interfaces/common';
+import { BaseParamsRequest, BaseRequestBody, LoginBody, TextResponse } from './interfaces/common';
 
 /**
  * Handler function for logging a user in.
