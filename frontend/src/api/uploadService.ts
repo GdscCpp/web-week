@@ -6,13 +6,16 @@ const instance = axios.create({
   },
 });
 
-export const upload = async (data: File) => {
+export const upload = async (data: File, user: string) => {
   try {
-    await instance.postForm('http://localhost:8000/upload', { resume: data });
+    const formData = new FormData();
+
+    formData.append('user', user);
+    formData.append('resume', data);
+
+    await instance.postForm('http://localhost:8000/upload', formData);
     return true;
-  } catch(error) {
+  } catch (error) {
     return false;
   }
 };
-
-

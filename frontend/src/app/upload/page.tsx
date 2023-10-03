@@ -20,7 +20,8 @@ export default function Upload() {
     const fileUploaded = event?.target?.files && event.target.files[0];
 
     if (fileUploaded != null) {
-      const req = await upload(fileUploaded)
+      const user = localStorage.getItem('user');
+      const req = await upload(fileUploaded, user!)
 
       if(req === true) {
         toast("File Uploaded Successfully!",{type:"success"})

@@ -16,6 +16,7 @@ export default function Login() {
   const handleLogin = async () => {
     const res = await login(username, password);
     if (res === true) {
+      localStorage.setItem('user', String(username));
       router.push('./upload');
     } else {
       toast.error('Incorrect Credentials 🤓☝️, Please Try Again', {

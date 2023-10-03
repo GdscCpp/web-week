@@ -1,7 +1,7 @@
 import { logger } from '@lib/logger';
 import { Request } from 'express';
 
-import { TextResponse } from './interfaces/common';
+import { BaseRequestBody, TextResponse } from './interfaces/common';
 
 // TODO BRYAN: document this
 export const upload = (req: Request, res: TextResponse) => {
