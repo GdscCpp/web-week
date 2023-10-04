@@ -9,7 +9,13 @@ import { BaseRequestBody } from '@handlers/interfaces/common';
 
 const multerStorage = multer.diskStorage({
   destination: (req:BaseRequestBody<{user:string}>, file, cb) => {
-    cb(null, path.resolve(process.env.uploadPath || `../frontend/public/uploads/${req.body.user}`));
+    cb(
+      null,
+      path.resolve(
+        (process.env.uploadPath && process.env.uploadPath + `/${req.body.user}`) ||
+          `../frontend/public/uploads/${req.body.user}`
+      )
+    );
   },
   filename: (req, file, cb) => {
     const ext = file.mimetype.split('/')[1];
