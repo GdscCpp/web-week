@@ -13,18 +13,23 @@ moduleAlias.addAliases({
 });
 
 import { logger } from '@lib/logger';
-import { userRoutes } from './routes/user';
+import routes from './routes';
+import cors from 'cors';
 
-const app = express();
+const corsOptions = {
+  origin: 'http://localhost:3000',
+  optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
 
 const port = process.env.PORT || 8000;
 
-app.use(express.urlencoded({ extended: false }));
+const app = express();
+
+app.use(cors(corsOptions))
 
 app.use(express.json());
 
-// normally we would export each set of routes to a single routes file, instead of directly importing it
-app.use(userRoutes);
+app.use(routes);
 
 app.listen(port, () => {
   logger.info(`Running on ${port}`);

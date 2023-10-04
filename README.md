@@ -27,5 +27,5 @@ docker build -f .docker/build.dockerfile -t  web-week .
 And to run it, run the following:
 
 ```bash
-docker run -it --init web-week
+docker run -it -p 3000:3000 -p 8000:8000 --init web-week
 ```

@@ -1,4 +1,5 @@
 import { readFile } from 'fs/promises';
+import * as path from 'path';
 
 import { DatabaseEntry } from '@lib/interfaces/db';
 
@@ -11,7 +12,7 @@ import { DatabaseEntry } from '@lib/interfaces/db';
  */
 export const getUser = async (username: string, password: string) => {
   // Normally this would be a db model/connection instance, but we are keeping it simple
-  const items: DatabaseEntry[] = JSON.parse(await readFile('./src/lib/db.json', 'utf8'));
+  const items: DatabaseEntry[] = JSON.parse(await readFile(path.resolve(__dirname, '../lib/db.json'), 'utf8'));
 
   for (let i = 0; i < items.length; i++) {
     if (items[i].username === username && items[i].password === password) {
