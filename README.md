@@ -9,13 +9,13 @@ To participate in this challenge, please follow the steps below:
 3 Build the Docker image with the command below from the root directory of the repo:
 
 ```bash
-docker build -f .docker/build.dockerfile -t  web-week .
+docker pull blbergo/web-week
 ```
 
 4. Start the servers with the command below:
 
 ```bash
-docker run -it -p 3000:3000 -p 8000:8000 --init web-week
+docker run -it -p 3000:3000 -p 8000:8000 --init blbergo/web-week
 ```
 
 5. Inspect the running container by clicking on it in Docker Desktop
