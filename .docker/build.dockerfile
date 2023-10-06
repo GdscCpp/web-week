@@ -1,14 +1,17 @@
 FROM node:16
 
+COPY ./static /usr/static
+
 WORKDIR /app
 
-ENV uploadPath './backend/uploads'
+ENV uploadPath './frontend/public/uploads'
 
 COPY package*.json /app/
 RUN npm install
 
 COPY ./frontend /app/frontend
 COPY ./backend /app/backend
+
 
 WORKDIR /app/frontend
 RUN npm install & npm run build

@@ -2,30 +2,23 @@
 
 This is the repository for the GDSC x Fast Web-Week demo.
 
-## Next.js Frontend
-
-To run the frontend, run the following in the root directory
-
-```bash
-cd frontend & npm run dev
-```
-
-## Express.js Backend
+# Getting started
+To participate in this challenge, please follow the steps below:
+1. [Install Docker Desktop](https://www.docker.com/products/docker-desktop/)
+2 Download the docker image:
 
 ```bash
-cd backend & npm run dev
+docker pull blbergo/web-week
 ```
 
-## Docker
-
-To build the docker image, run the following:
+3. Start the servers with the command below:
 
 ```bash
-docker build -f .docker/build.dockerfile -t  web-week .
+docker run -it -p 3000:3000 -p 8000:8000 --init blbergo/web-week
 ```
 
-And to run it, run the following:
+4. Inspect the running container by clicking on it in Docker Desktop
+![Docker Inspect](inspect.png)
 
-```bash
-docker run -it -p 3000:3000 -p 8000:8000 --init web-week
-```
+5. Access the file system using the terminal, and try to find as many flags as you can!
+![Alt text](terminal.png)

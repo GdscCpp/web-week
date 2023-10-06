@@ -3,5 +3,8 @@
   {
     "username": "steve",
     "password": "jobs"
+  },
+  {
+    "username":"developer", "password":"flag1"
   }
 ]
